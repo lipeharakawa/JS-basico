@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felipe Seidi Harakawa">
+    <meta name="description" content="Página web com conceitos básicos de JavaScript.">
+    <link rel="stylesheet" href="./style.css">
+    <title>JavaScript Básico</title>
+</head>
+<body>
+    <header>
+        <h1>Conceitos Básicos de JavaScript</h1>
+    </header>
+    <section class="section">
+        <div class="section_parte_1">
+            <h2>Variáveis</h2>
+            <p> <b>Strings</b> — Uma String nada mais é que texto puro.</p>
+            <p> <b>Numbers</b> — São os números, seja eles integer, float, double etc.</p>
+            <p> <b>Booleans</b> — São os operadores booleanos (true ou false).</p>
+            <p> <b>Arrays</b> — É uma estrutura de dado para armazenar uma coleção de valores, sendo eles de qualquer tipo.</p>
+            <p> <b>Objects</b> — Conjunto de atributos aninhados a uma variável denomina-se um objeto.</p>
+            <p> <b>Functions</b> — Em JavaScript é possível declarar uma variável como uma função, podendo fazer operações e retornando o valor para a variável de declaração. Obs: muito utilizado no paradigma de programação funcional.</p>
+            
+            <h2>Usando variáveis</h2>
+            <p> <b>Strings</b> — var nome = "Felipe Seidi Harakawa";</p>
+            <p> <b>Numbers</b> — var idade = 25;</p>
+
+            <h2>Concatenação</h2>
+            <p>Concatenar é uma palavra chique da programação que significa "colocar junto". Para colocar strings juntas em JavaScript, usamos o operador (+), o mesmo usamos para adicionar números, mas neste contexto é algo diferente.</p>
+            <p>"Meu nome é " + nome + " e eu tenho " + idade + " anos";</p>
+            <p>"Média do Aluno é " + notaFinal;</p>
+            <p>"Olá " + nome + " " + sobrenome;</p>
+
+            <h2>Operações</h2>
+            <p>var nota1 = 8; <br>
+            var nota2 = 7.5;</p>
+            <p>var notaFinal = (nota1 + nota2) / 2;</p>
+
+            <h2>Comandos de entrada</h2>
+            <p>Seu objetivo é obter alguma informação do usuário da página.</p>
+            <p>var nome = prompt("Qual o seu nome ?");</p>
+            <p>var sobrenome = prompt ("Qual o seu sobrenome ?");</p>
+
+            <h2>Escrevendo na página</h2>
+            <p>document. write é feito, de uma forma bem simplificada, quando você quer escrever alguma coisa dentro de uma página e gostaria que fosse exibida para o seu usuário.</p>
+            <!-- <p>document.write("<H1> Bem vindo " + nome + " " + sobrenome + " ao projeto </h1>");</p> -->
+            <!-- <p>document.write("<img src='https://sujeitoprogramador.com/steve.png' alt='Foto de Steve' />");</p> -->
+
+            <h2>Funções</h2>
+            <p>Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.</p>
+
+            <div>
+                <h3>Função entrar() - Bem vindo!👋</h3>
+                <button onclick="entrar()">Acessar</button>
+                <p id="lista-1"></p>
+            </div>
+
+            <div>
+                <h3>Função mediaAluno() - Notas Alunos</h3>
+                <input type="number" id="nota1" name="nota1" placeholder="Digite a primeira nota">
+                <input type="number" id="nota2" name="nota2" placeholder="Digite a segunda nota">
+                <button onClick="mediaAluno()">Calcular média</button>
+                <p id="lista-2"></p>
+            </div>
+
+            <h2>Arrays</h2>
+            <p>Os arrays são estruturas que servem para guardar dados, e organizá-los. Seu objetivo é ser um espaço fixo na memória do computador que armazena elementos. Esses elementos podem ser acessados por um tipo de indicação, que chamamos de índice.</p>
+            <p>var lista = ["Felipe", "Rogerio", "Marcelo", 150]; <br>
+            console.log(lista);</p>
+
+            <h3>Pegando um item em uma posição</h3>
+            <p>console.log(lista[0]);</p>
+
+            <h3>Tamanho da lista</h3>
+            <p>console.log(lista.length);</p>
+
+            <h3>Método para pesquisar um elemento na lista e a sua posição</h3>
+            <p>console.log(lista.indexOf("Rogerio"));</p>
+            <p>console.log(lista.indexOf(150));</p>
+            <p>console.log(lista.indexOf("Iracema"));</p>
+
+            <h3>Altera o item da lista</h3>
+            <p>lista[0] = "Felipe Harakawa"; <br>
+            console.log(lista[0]);</p>
+            <p>lista[3] = 500; <br>
+            console.log(lista);</p>
+
+            <h3>Adiciona um item ao final da lista</h3>
+            <p>lista.push("Renan", 350);</p>
+
+            <h3>Adiciona um item ao início da lista</h3>
+            <p>lista.unshift("Rafael", 400);</p>
+
+            <h3>Remove o primeiro item da lista</h3>
+            <p>lista.shift();</p>
+
+            <h3>Remove o último item da lista</h3>
+            <p>lista.pop();</p>
+
+            <h3>Retorna os elementos da lista separados por um vírgula convertendo em um string</h3>
+            <p>var nomes = lista.toString(); <br>
+            console.log(nomes);</p>
+
+            <h3>Retorna os elementos da lista separados por um carácter convertendo em um string</h3>
+            <p>var nome = lista.join("/"); <br>
+            console.log(nome);</p>
+
+            <h3>Mescla dois arrays existentes</h3>
+            <p>var frutasVermelhas = ["Maça", "Morango", "Cereja"]; <br>
+            var frutasAmarelas = ["Banana", "Melão", "Carambola"]; <br>
+            var frutasColoridas = frutasVermelhas.concat(frutasAmarelas);</p>
+
+            <h2>Loops</h2>
+            <p>É um código que vai ser repetindo até que uma determinada condição seja alcançada, ou até mesmo que não haja condição de parada, estes são conhecidos como loops infinitos.</p>
+
+            <h3>for</h3>
+            <p>Um laço for é repetido até que a condição especificada seja falsa.</p>
+            <p>for ([expressaoInicial]; [condicao]; [incremento]){ <br>
+            declaracao; }</p>
+            <p>var valor = 5; <br>
+            for(a = 0; a < valor; a++){ <br>
+            document.write("O valor de A é: " + a); }</p>
+
+            <h3>while</h3>
+            <p>Uma declaração while executa suas instruções, desde que uma condição especificada seja avaliada como verdadeira</p>
+            <p>while (condicao){ <br>
+            declaracao; }</p>
+            <p>var x = 0; <br>
+            while(x < 5){ <br>
+            document.write("O valor do x é: " + x); <br>
+            //Aumentando o valor de x <br>
+            x++; }</p>
+
+            <h3>switch</h3>
+            <p>Permite executar um bloco de código diferente de acordo com cada opção (cada case) especificada.</p>
+          
+            <div>
+                <h4>Escolha um item</h4>
+                <ul>
+                    <li>1 - Suco</li>
+                    <li>2 - Água Gelada</li>
+                    <li>3 - Sorvete</li>
+                    <li>4 - Chamar o garçom</li>
+                </ul>
+                <button onclick="pedir()">Pedir</button>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
